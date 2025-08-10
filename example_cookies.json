@@ -1,0 +1,8 @@
+{
+  "auth_token": "your_auth_token_here",
+  "ct0": "your_ct0_token_here",
+  "__cf_bm": "your_cf_bm_token_here",
+  "att": "your_att_token_here",
+  "d_prefs": "your_d_prefs_here",
+  "guest_id": "your_guest_id_here"
+}
