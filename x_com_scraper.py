@@ -267,7 +267,8 @@ class TwitterScraper:
             for i, tweet in enumerate(tweets[:10]):
                 text_preview = tweet['text'][:80] + ("..." if len(tweet['text']) > 80 else "")
                 time_str = tweet['time'] if tweet['time'] else 'Unknown'
-                print(f"{i+1}. [{time_str}] {text_preview}")
+                tweet_id = tweet.get('tweet_id', 'Unknown')
+                print(f"{i+1}. [{time_str}] ID: {tweet_id} | {text_preview}")
             if len(tweets) > 10:
                 print(f"... and {len(tweets) - 10} more tweets")
         
@@ -387,7 +388,8 @@ class TwitterScraper:
                 text_preview = tweet['text'][:80] + ("..." if len(tweet['text']) > 80 else "")
                 time_str = tweet['time'] if tweet['time'] else 'Unknown'
                 user = tweet.get('user_identifier', 'Unknown')
-                print(f"{i+1}. [{time_str}] @{user}: {text_preview}")
+                tweet_id = tweet.get('tweet_id', 'Unknown')
+                print(f"{i+1}. [{time_str}] @{user} | ID: {tweet_id} | {text_preview}")
             if len(all_tweets) > 10:
                 print(f"... and {len(all_tweets) - 10} more tweets")
         
